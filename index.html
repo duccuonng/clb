@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lạc bộ tin học</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+            }
+        body {
+            background-image: url('https://i.pinimg.com/736x/6c/c2/cb/6cc2cb78b54b11c0419731bb2a89b0d1.jpg');  
+            background-size: cover;  
+            background-position: center;  
+            background-attachment: fixed;  
+            }
+            
+        .menu1{
+        max-width: 960px;
+        margin: 0 auto;
+        }
+        #header{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        z-index: 1000; 
+        padding: 10px 0;
+        }
+        nav{
+        display:flex;
+        justify-content: space-between;
+        justify-items: center;
+        }
+        #logo img {
+        max-width: 70PX ;
+        height:auto;       
+        }
+        #logo{
+        padding:10px 0px;
+        }
+        #main-menu{
+        display:flex;
+        list-style: none;
+        margin:0;
+        padding:0;
+        color:white;
+        }
+        #main-menu li a{
+        color:white;
+        display:block;
+        padding:25px 32px;
+        text-decoration: none;
+        }
+        #main-menu>li>a{
+        position:relative;
+        }
+        #main-menu>li>a::before{
+        content:'';
+        height:4px;
+        width:100%;
+        background:rgb(251, 251, 251);
+        position:absolute;
+        left:0px;
+        bottom:0px;
+        display:none;
+        }
+    #main-menu>li:hover>a::before{
+        display:block;
+    }
+    .ct4 a {
+    text-decoration: none;
+    }
+    #wrapper-content {
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    color: white;
+    padding-top: 80px;
+    }
+
+    h1 {
+    text-align: center;
+    color: rgb(251, 251, 251);
+    }
+
+    p {
+    line-height: 1.6;
+    font-size: 16px;
+    }
+
+    img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    }
+
+    [id] {
+            scroll-margin-top: 80px;
+        }
+    
+    #content2{
+        margin-top: 36px;
+        padding:12px 0;
+        display:flex;
+        justify-content: space-between;  
+        gap: 20px;
+    }
+    .content2v{
+        padding:0 16px;
+        flex:1;
+        text-align: justify;
+        background-color: #001932;
+        border-radius: 10px;
+    }
+    .content2v h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    }       
+    
+    #content3 {
+        margin-top: 36px;
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .content3v {
+        padding: 0 16px;
+        flex: 1;
+        text-align: justify;
+        background-color: #001932;
+        border-radius: 10px;
+    }
+
+    .content3v h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+
+    #content4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    
+}
+
+.ct4 {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ct4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ct4 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+}
+
+.ct4 h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700; /* Màu vàng nổi bật */
+}
+
+.ct4 p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #e3e3e3;
+}
+
+.ct4 a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: white;
+    color: #007bff;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ct4 a:hover {
+    background-color: #ffd700;
+    color: white;
+}
+
+.activity {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.activity img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.activity-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.activity:hover img {
+    transform: scale(1.1);
+}
+
+.activity:hover .activity-content {
+    transform: translateY(0);
+}
+
+.activity-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.activity-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.activity-date {
+    font-size: 12px;
+    font-style: italic;
+    color: #f1f1f1;
+}
+
+
+#content7 {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.ct7-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.ct7 {
+    background: linear-gradient(135deg, #161670, #181155f3);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ct7:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ct7 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+    transform: scale(1.05);
+}
+
+.ct7 p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #f1f1f1;
+}
+
+.ct7 a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ffd700;
+    color: #007bff;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#content6 {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.register-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+}
+
+.register-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+    </style>
+</head>
+
+
+<body>
+    <div id="wrapper">
+        
+        <div id="header">
+            <nav class="menu1">
+                <a href="" id="logo">
+                    <img src="https://thptlythuongkietlagi.edu.vn/theme/frontend/default/image/logo.png" alt="Trang chủ">
+                </a>
+                <ul id="main-menu">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="#content4">Thành viên</a></li>
+                        <li><a href="#content5">Hoạt động</a></li>\
+                        <li><a href="#content7">Thành tích</a></li>
+                        <li><a href="#content6">Đăng ký</a></li>
+                        
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div id="wrapper-content">
+            <div id="content0">
+                <h1>Câu lạc bộ tin học</h1>
+                <img src="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/304840510_5984652938214933_4603208823733136155_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHK9R8K0daUdxXwyO21gWX0mHX6fbzdywGYdfp9vN3LAdvTz1H-wC0llTKLzCMGKnC-nOHAuupDrHIH-PxmAAcf&_nc_ohc=j-jOCgmAKX0Q7kNvgFOyoaA&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=Af-QPGimO58yY3QtJ3I0l_G&oh=00_AYBRBabWUdKxZt6_MxqjjWomufnUgWZYteyi54TmsokIMw&oe=67962015" alt="">
+            </div>
+            <div id="content1">
+                <p>CLB tin học trường thpt
+                    LTK trực thuộc tỉnh
+                    Bình Thuận. Tính đến nay clb đã hoạt động và phát triển được 9 năm với mục đích giúp đỡ các bạn học tập tốt hơn trong các kì học khó khăn và cùng đồng hành cùng với nó là những hoạt động vui vẻ giúp chúng ta giữ lửa của tuổi trẻ.
+                    LTKIT là nơi tạo môi trường học tập và rèn luyện cho các bạn, tại đây các thành viên có cơ hội gặp gỡ học hỏi, sở hữu thông tin tài liệu, các kiến thức quý báu trong lĩnh vực công nghệ, cùng nhau nghiên cứu sáng tạo và đưa ra các phương pháp học, định hướng nghề nghiệp, nhằm phát triển bồi dưỡng các sinh viên giỏi tin học để tham gia các hội thi như
+                    OLYMPIC Tin Học, Sinh viên An toàn Thông tin... </p>
+            </div>
+
+
+            <div id="content2.1" style="margin-top: 50px;"><h1>Giới thiệu các ban</h1></div>
+            <div id="content2">
+               <div class="content2v a">
+                    <p><h2>Ban truyền thông kỹ thuật</h2> Đây được coi là bộ mặt của câu lạc bộ với đem theo trong mình rất nhiều nhiệm vụ cao cao: viết content, lên ý tưởng, bài đăng, lên kế hoạch truyền thông, thiết kế ảnh, edit video, ... Quả thực 1 ban thú vị đúng không nào? để biết thêm hãy liên hệ với trưởng ban qua nút bên dưới</p>
+               </div>
+            
+               <div class="content2v b">
+                    <p><h2>Ban Chủ Nhiệm</h2>Ban chủ nhiệm câu lạc bộ được thành lập thông qua kết quả bầu cử tại đại hội CLB và có quyết định bổ nhiệm từ cấp trên với nhiệm kỳ hoạt động là một năm trong đó xác định các cá nhân cụ thể cho các chức danh phó chủ nhiệm và thư kí. Ban này được coi là nền móng để các ban khác đi lên và phát triển</p>
+               </div>
+            
+               <div class="content2v c">
+                    <p><h2>Ban Ứng Dụng</h2>Ban ứng dụng được coi là ban deadline nặng nhất trong 3 ban. Chuyên nghiên cứu, sáng tạo và đưa ra các phương pháp học tập, phát hiện và bôi dưỡng các sinh viên khá giỏi tin học để tham gia cấc cuộc thì Olympic Tin Học, Mùa hè xanh, định hướng nghề nghiệp.</p>
+               </div>
+
+               <div class="content2v d">
+                    <p><h2>Ban sự kiện</h2>Ban sự kiện phụ trách các mảng liên quan đến tổ chức hoạt động, sự kiên trong và ngoài câu lạc bộ.
+                    Giúp các thành viên trong câu lạc bộ thêm gắn kết và vui vẻ,duy trì "ngọn lửa" của câu lạc bộ. Quả thực là một ban rất năng động đúng không nào?</p>
+               </div>
+
+            </div>
+            <div id="content3.1" style="margin-top: 50px;"><h1>Quy chế hoạt động</h1></div>
+            <div id="content3">
+                <div class="content3v a"><p><h2>Mục đích thành lập</h2>- Tạo môi trường học tập và rèn luyện cho các bạn học sinh THPT LTK có niềm đam mê và yêu thích CNTT. Tại đây các thành viên có cơ hội gặp gỡ, học hỏi, giao lưu kiến thức trong lĩnh vực CNTT để từ đó nâng cao trình độ chuyên môn phục vụ hiệu quả cho quá trình học tập. <br>- Nhằm phát hiện bồi dưỡng các học sinh giỏi tin học để tham gia các hội thi như OLYMPIC Tin Học, Tin Học Trẻ,... .</p></div>
+                <div class="content3v b"><p><h2>Chức năng và nhiệm vụ</h2>- Tổ chức bồi dưỡng kiến thức rèn luyện việc theo nhóm, khả năng lập dự án, phát huy khả năng sáng tạo của mỗi học sinh thông qua các hoạt động của CLB.  <br>- Tạo sân chơi giải trí cho các học sinh</p></div>
+                <div class="content3v c"><p><h2>Đối tượng tham gia</h2>- Tất cả học sinh đang học tập tại trường yêu thích CNTT và có mong muốn tham gia CLB, tán thành quy chế CLB đề ra và tích cực tham gia các chương trình các buổi hoạt động của CLB thì được BCN xét công nhận là thành viên của CLB.</p></div>
+            </div>
+            <div id="content4.1" style="margin-top: 40px;"><h1>Thành viên</h1></div>
+            <div id="content4">
+                <div class="ct4">
+                    <img src="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/474230737_952734423703618_8101123639136387853_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGAhaTdH_vF9urHfxVQ4qc236La0mETJmPfotrSYRMmY4l_WJExZosRGcmWqNOtBNg2Fkt_Tthqrc-Hk1y625r0&_nc_ohc=dg8RrSZn80EQ7kNvgEtct50&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=A2T0qevbXTqUXll4Xtc5QyE&oh=00_AYAPts5FlEZ6HguVgeNuAYKcAbSKYBqQTbAQ1IMBHRVcyg&oe=679614B9" alt="Nguyễn Thanh Bích">
+                    <h3>Chủ tịch CLB</h3>
+                    <p>Nguyễn Thanh Bích <br> Giáo Viên Trường THPT Lý Thường Kiệt</p>
+                    <a href="https://www.facebook.com/thanhbichnguyen111">Facebook</a>
+                </div>
+                <div class="ct4">
+                    <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/449041444_1629723467851803_5482190985757409704_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeEZF8HCdAz47lR1ZeoOwEjefuz-i3ibcY5-7P6LeJtxjq7mZmrQcRj8hbA5x-eOQdsVAWUY7m8f8NfL9xnNTA8G&_nc_ohc=FHQ2gAc1N28Q7kNvgFapWzw&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=A6f0IfAjvDb8L4gqsE_EnxZ&oh=00_AYCuouCCI8RMZ3DjC5oqGf3Nc0ZnZdFwOf7TK5KU4_9SDQ&oe=67961189" alt="Hồ Nguyễn Gia Như">
+                    <h3>Thành viên</h3>
+                    <p>Hồ Nguyễn Gia Như <br> Học sinh Trường THPT Lý Thường Kiệt</p>
+                    <a href="https://www.facebook.com/hngn.136">Facebook</a>
+                </div>
+                <div class="ct4">
+                    <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/473559653_1121165866155698_8398771832995019816_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGl-lt5NSA0GsswM4-aQHG13W5dQPpFnR7dbl1A-kWdHiId62LyJgqYcKRsNtGIaVAp8slBLVTmaiQhIrrjC9aH&_nc_ohc=j8FRmAOKPioQ7kNvgFDaa_q&_nc_zt=24&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AgHRRkhwzB4x2d5_jql28YF&oh=00_AYCLkad6X62mekN-PhO5L_2dn1N1zVILk4r9u1M4q6VSiA&oe=67962F8D" alt="Nguyễn Bảo Ngân">
+                    <h3>Thành viên</h3>
+                    <p>Nguyễn Bảo Ngân <br> Học sinh Trường THPT Lý Thường Kiệt</p>
+                    <a href="https://www.facebook.com/ngannbao.nguyenn">Facebook</a>
+                 </div>
+                 <div class="ct4">
+                    <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/461980166_842167248109265_3704710536999681678_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGHCgOQupr9MLS6Sn6heS2YIwInty-lxnwjAie3L6XGfCgZQMzJnuyWxNs7BrDpTLrt_6YftAmH73chlqy4IDkN&_nc_ohc=m3C1reZm7vAQ7kNvgGyhBZp&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=AC3J6eBf7mWwAL9-tKW0qvR&oh=00_AYBd9Q0-ez-so0ps_4z3V9TodsqYSx47LWwxEU-2a-Ncew&oe=67960396" alt="Hồng Vân">
+                    <h3>Thành viên</h3>
+                    <p>Hồng Vân <br> Học sinh Trường THPT Lý Thường Kiệt</p>
+                    <a href="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-1/461980166_842167248109265_3704710536999681678_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGHCgOQupr9MLS6Sn6heS2YIwInty-lxnwjAie3L6XGfCgZQMzJnuyWxNs7BrDpTLrt_6YftAmH73chlqy4IDkN&_nc_ohc=m3C1reZm7vAQ7kNvgGyhBZp&_nc_zt=24&_nc_ht=scontent.fdad3-5.fna&_nc_gid=AC3J6eBf7mWwAL9-tKW0qvR&oh=00_AYBd9Q0-ez-so0ps_4z3V9TodsqYSx47LWwxEU-2a-Ncew&oe=67960396">Facebook</a>
+                </div>
+            </div>
+
+            <div id="content5">
+                <h1>Hoạt động</h1>
+                <div class="activity">
+                    <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.6435-9/87454864_855475338198651_2394926347534204928_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFtZEuZaGOr0bCu-ylXr4hAY0pCJEZV5MJjSkIkRlXkwhwntGAVF1oSdEbzf-07Sa_ZMy9KwL0hCzKPz65sgDMa&_nc_ohc=S-X_7Zy9x5kQ7kNvgEAsKS1&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=AuQqLI3hBJ8Kr1Lkx9qM-5m&oh=00_AYBT2ZTtKj3zGIqTSVRKiinGmnKC9njZqDLeFL7L6QbnQg&oe=67AF426B" alt="Hoạt động 1">
+                    <div class="activity-content">
+                        <div class="activity-title">Tin Học Trẻ Bình Thuận 2020</div>
+                        <div class="activity-description">
+                            Vòng loại trực tuyến "Tin học trẻ" tỉnh Bình Thuận lần thứ XXII chính thức khởi động. <br>
+                            Các bạn đoàn viên, thanh niên yêu thích môn tin học hãy truy cập vào trang web: <a href="http://tinhdoanbinhthuan.vn/ "> http://tinhdoanbinhthuan.vn/</a>để cùng tham gia.</p>
+                        </div>
+                        <div class="activity-date">2020</div>
+                    </div>
+                </div>
+                <div class="activity">
+                    <img src="https://storage-vnportal.vnpt.vn/btn-ubnd/sitefolders/root/6055/2022/thang4/ngay25/image003.jpg" alt="Hoạt động 2">
+                    <div class="activity-content">
+                        <div class="activity-title">Tin Học Trẻ Bình Thuận 2022</div>
+                        <div class="activity-description">
+                            Đoàn trường THPT Lý Thường Kiệt tham gia Hội thi tin học trẻ tỉnh Bình Thuận lần thứ XXIII năm 2022. <br>
+                            Được sự cho phép của Chi bộ và Ban giám hiệu nhà trường, Đoàn trường đã phối hợp với Tổ Tin học giới thiệu 2 học sinh đăng ký tham gia hội <br>
+                            Vào sáng ngày 24/4/2022, tại Nhà thiếu nhi tỉnh, Hội thi Tin học trẻ tỉnh Bình Thuận lần thứ XXIII, năm 2022 chính thức diễn ra. Sau thời gian 150 phút làm bài ở bảng C, em Vũ Đức Nhân lớp 10A2 đã đạt giải nhì và em Mai Văn Tiến Phát lớp 11A2 đạt giải khuyến khích hội thi. Đoàn trường xin chúc mừng 2 học sinh đã đạt giải hội thi năm nay. Qua hội thi các em sẽ học hỏi thêm được nhiều bài học kinh nghiệm, tiếp thu được những kiến thức mới, tiếp tục phấn đấu trong học tập.
+                        </div>
+                        <div class="activity-date">2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content7.1">
+                <h1>Thành tích</h1>
+            </div>
+            
+            <div id="content7">
+                    <div class="ct7-container">
+                        <div class="ct7">
+                            <p>Tham gia hội thi “Tin học trẻ tỉnh Bình Thuận” lần XXI năm 2020! Chúc mừng các bạn đã có kỳ thi thành công, bổ ích!</p>
+                            <img src="https://scontent.fdad3-4.fna.fbcdn.net/v/t1.6435-9/103076602_272654577478807_842037445069877987_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGK-XCK-qauZ7KPbEurUHCzWnZD1XPMnNtadkPVc8yc2_--EhBRfyu7_gxTRRbEObHSs6zmoZYsGCwqiHVq7NTi&_nc_ohc=2X1WZbDFNsUQ7kNvgFX-b_B&_nc_zt=23&_nc_ht=scontent.fdad3-4.fna&_nc_gid=AdClHLnT0LU-P9xvQi3yBIp&oh=00_AYBgwNlj07k1ymorCIL9iTsyHMlBLRbXgJbt687iHHk3Jg&oe=67AF2601" alt="">
+                        </div>
+                        
+                        <div class="ct7">
+                            <p>Nguyễn Phú Thịnh (12A3) - THPT Lý Thường Kiệt đã đạt giải 3 hội thi Tin học trẻ tỉnh Bình Thuận lần thứ 22, năm 2021</p>
+                            <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t1.6435-9/173930411_1146845082395007_5916157670138841920_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGbf3ptqn_FV4sD2C7p2YLoe4Y0f1flWgR7hjR_V-VaBHQ6eefrcOzg9E7Lh1wBHt1nIwsA4g6WQkzDmjfNfp4b&_nc_ohc=oLClT-59LigQ7kNvgEBWPil&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AftZyjB5YBsfO8bs8i0OIF7&oh=00_AYDUhMGd8-njC4_ZDe7DU-rr5aDkTf84Z-IsULBZe5fBlQ&oe=67B7EE17" alt="">
+                        </div>
+            
+                        <div class="ct7">
+                            <p>Chúc mừng bạn Vũ Đức Nhân - lớp 11A2 đã đạt giải nhì Bảng C (khối THPT) Hội thi Tin học trẻ Tỉnh Bình Thuận lần thứ XXIV, năm 2023. Đây là lần thứ 2 trong 2 năm liên tiếp em Vũ Đức Nhân đạt giải nhì của hội thi</p>
+                            <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/343528370_800898445041874_261632640100669907_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEpDIQMzqLiA_g0hch3pPl_VqekUk9QkktWp6RST1CSSxmH-_TAZeiH84KNLezYi-fTrLhM4kVi8WtvblGOEFZN&_nc_ohc=cNR3hGCEr_QQ7kNvgEvHmru&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=A4GBb_f8zudXwhSGmTfifJA&oh=00_AYA4wqUtoPfOEGiWiwQ5gkIm2Uq8j_MDBB4CF4kaO9S0aQ&oe=67962AEC" alt="">
+                        </div>
+                        
+                        <div class="ct7">
+                            <p>Chúc mừng bạn Vũ Đức Nhân - lớp 12A2 và bạn Phạm Châu Anh Kiệt - lớp 11A7 đã đạt giải nhì Bảng C2 (khối THPT) Hội thi Tin học trẻ Tỉnh Bình Thuận lần thứ XXV, năm 2024</p>
+                            <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/438263453_1863571600722348_4602196748671411070_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG9Ur09hlv7Rk4Pl6RVp-Yk_bS1o-bRWgD9tLWj5tFaAI9hLbeCZMsdnbSdpmewyM9hZhRJxS0l3uJitpEbUKkZ&_nc_ohc=9HFA_c5m7w8Q7kNvgEupqH8&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=AwjNTiinMEDCDNnKW1u080J&oh=00_AYAKOnW7SXPa1B67QQYbNzBFixQg_Yf6Z5x3Slx1BlieVw&oe=67963BCD" alt="">
+                        </div>
+                    </div>
+                
+            </div>
+            
+
+
+            <div id="content6.1" style="margin-top: 40px;"><h1>Thông tin đăng ký</h1></div>
+            <div id="content6">
+                <div class="register-container">
+                    <h1>Đăng ký tham gia CLB</h1>
+                    <form action="#" method="POST" class="register-form">
+                        <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Nhập email của bạn">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="school">Trường học:</label>
+                            <input type="text" id="school" name="school" required placeholder="Nhập tên trường của bạn">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="reason">Lý do tham gia:</label>
+                            <textarea id="reason" name="reason" rows="4" required placeholder="Nhập lý do tham gia CLB"></textarea>
+                        </div>
+            
+                        <div class="form-group">
+                            <button type="submit" class="btn-submit">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="fotter">
+
+        </div>
+
+    </div>
+</body>
+</html>
